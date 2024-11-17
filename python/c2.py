@@ -4,8 +4,8 @@ from __future__ import print_function
 import logging
 import warnings
 from abc import ABCMeta, abstractmethod
-from collections import OrderedDict
-from collections import namedtuple
+from collections import OrderedDict # 有序字典
+from collections import namedtuple  # 可命名的元祖
 import itertools
 # noinspection PyCompatibility
 from concurrent.futures import ProcessPoolExecutor
@@ -65,6 +65,7 @@ def sample_212(show=True):
     2.1.2 字符串和容器
     :return:
     """
+    # 定义show_func 根据参数show决定是使用内置函数 print 还是一个什么都不做的 lambda 函数
     show_func = print if show else lambda a: a
     price_str = '30.14, 29.58, 26.36, 32.56, 32.82'
     show_func('旧的price_str id= {}'.format(id(price_str)))
@@ -77,28 +78,33 @@ def sample_212(show=True):
     # price_array尾部append一个重复的32.82
     price_array.append('32.82')
     show_func(price_array)
-    show_func(set(price_array))
-    price_array.remove('32.82')
+    show_func(set(price_array)) # 集合无序且无重复(生成一个新的set，原来的没有变)
+    price_array.remove('32.82') # 仅移除第一次出现的
     show_func(price_array)
 
     date_array = []
     date_base = 20170118
     # 这里用for只是为了计数，无用的变量python建议使用'_'声明
-    for _ in xrange(0, len(price_array)):
+    for _ in range(0, len(price_array)):
         date_array.append(str(date_base))
         # 本节只是简单示例，不考虑日期的进位
         date_base += 1
     show_func(date_array)
 
     date_base = 20170118
+    # enumerate 是 Python 内置的一个函数，它可以将一个可迭代对象（如列表、元组、字符串等）组合成一个索引序列
     date_array = [str(date_base + ind) for ind, _ in enumerate(price_array)]
     show_func(date_array)
 
+    # zip 函数是 Python 内置的一个函数，它可以将多个可迭代对象（如列表、元组、字符串等）中的元素配对，
+    # 然后返回一个元组的列表。每个元组包含了来自每个可迭代对象的一个元素
     stock_tuple_list = [(date, price) for date, price in zip(date_array, price_array)]
     # tuple访问使用索引
     show_func('20170119日价格：{}'.format(stock_tuple_list[1][1]))
     show_func(stock_tuple_list)
 
+    # namedtuple 是 Python 标准库 collections 模块中的一个工厂函数，
+    # 它允许你创建一个自定义的元组子类，其中的元素可以通过名称来访问，
     stock_namedtuple = namedtuple('stock', ('date', 'price'))
     stock_namedtuple_list = [stock_namedtuple(date, price) for date, price in zip(date_array, price_array)]
     # namedtuple访问使用price
@@ -112,6 +118,8 @@ def sample_212(show=True):
 
     show_func(stock_dict.keys())
 
+    # OrderedDict 是字典（dict）的一个子类，但是它会记住元素插入的顺序。
+    # 这意味着当你遍历 OrderedDict 时，元素会按照它们被插入的顺序返回
     stock_dict = OrderedDict((date, price) for date, price in zip(date_array, price_array))
     show_func(stock_dict.keys())
     return stock_dict
@@ -250,7 +258,9 @@ def sample_224():
         for day in want_days:
             change_sum += day.change
         return change_sum
-
+    # partial 函数是 Python 标准库 functools 模块中的一个函数，
+    # 它允许你部分地应用一个函数，即固定一个函数的某些参数，
+    # 然后返回一个新的函数，这个新函数可以接受剩余的参数
     filter_stock_up_days = partial(filter_stock, want_up=True, want_calc_sum=False)
     filter_stock_down_days = partial(filter_stock, want_up=False, want_calc_sum=False)
     filter_stock_up_sums = partial(filter_stock, want_up=True, want_calc_sum=True)
@@ -906,11 +916,11 @@ def sample_25():
         pdb.set_trace()
 
 if __name__ == "__main__":
-    sample_211()
+    # sample_211()
     # sample_212()
     # sample_221()
     # sample_222()
-    # sample_223()
+    sample_223()
     # sample_224()
     # sample_231()
     # sample_232()
