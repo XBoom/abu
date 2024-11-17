@@ -7,3 +7,9 @@ p.sh
 tmp
 test.py
 /abupy/RomDataBu/df_kl.h5
+lib/*
+bin/*
+pyvenv.cfg
+/etc
+/share
+abupy/RomDataBu/*
