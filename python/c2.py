@@ -290,16 +290,23 @@ class StockTradeDays(object):
 
     def __init_change(self):
         """
-        从price_array生成change_array
+        根据收盘价计算每天(相较于前一天)的涨跌幅
         :return:
         """
+        # 转换为float类型的 List
         price_float_array = [float(price_str) for price_str in
                              self.__price_array]
+        
         # 通过将时间平移形成两个错开的收盘价序列，通过zip打包成为一个新的序列
         # 每个元素为相邻的两个收盘价格
+        # [1, 2, 3, 4, 5] --> [(1, 2), (2, 3), (3, 4), (4, 5)]
         pp_array = [(price1, price2) for price1, price2 in
                     zip(price_float_array[:-1], price_float_array[1:])]
-        # list for python3
+        
+        # 1. pp_array 是连续两天的收盘价
+        # 2. map 接受 lambda 函数和 pp_array 作为参数
+        # 3. reduce 接受 lambda 函数和 pp(pp_array 的元素) 作为参数，
+        #       这个lambda函数接受两个参数a和b，并返回(b - a) / a的结果，这个结果被四舍五入到小数点后三位
         change_array = list(map(lambda pp: reduce(lambda a, b: round((b - a) / a, 3), pp), pp_array))
         # list insert插入数据，将第一天的涨跌幅设置为0
         change_array.insert(0, 0)
@@ -920,9 +927,9 @@ if __name__ == "__main__":
     # sample_212()
     # sample_221()
     # sample_222()
-    sample_223()
+    # sample_223()
     # sample_224()
-    # sample_231()
+    sample_231()
     # sample_232()
     # sample_233_1()
     # sample_233_2()
