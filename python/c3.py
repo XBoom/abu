@@ -9,14 +9,6 @@ import seaborn as sns
 warnings.filterwarnings('ignore')
 sns.set_context(rc={'figure.figsize': (14, 7)})
 
-
-"""
-    第三章 量化工具——NumPy
-    abu量化系统github地址：https://github.com/bbfamily/abu (您的star是我的动力！)
-    abu量化文档教程ipython notebook：https://github.com/bbfamily/abu/tree/master/abupy_lecture
-"""
-
-
 def sample_311():
     """
     3.1.1 并行化思想
@@ -425,8 +417,8 @@ def sample_342():
 
 
 if __name__ == "__main__":
-    sample_311()
-    # sample_312()
+    # sample_311()
+    sample_312()
     # sample_313()
     # sample_314()
     # sample_315()

@@ -206,6 +206,14 @@ def sample_223(show=True):
     show_func(up_days)
 
     def filter_stock(stock_array_dict, want_up=True, want_calc_sum=False):
+        """
+        过滤结果
+        :param stock_array_dict: 股票数据
+        :param want_up: 是否上涨
+        :param want_calc_sum: 是否计算涨跌幅和
+        :return:
+        """
+        # 判断对象是否是 OrderDict对象，有序map
         if not isinstance(stock_array_dict, OrderedDict):
             raise TypeError('stock_array_dict must be OrderedDict!')
 
@@ -276,7 +284,7 @@ def sample_224():
     2.3 面向对象
 """
 
-
+# 股票交易的类
 class StockTradeDays(object):
     def __init__(self, price_array, start_date, date_array=None):
         # 私有价格序列
@@ -285,7 +293,7 @@ class StockTradeDays(object):
         self.__date_array = self._init_days(start_date, date_array)
         # 私有涨跌幅序列
         self.__change_array = self.__init_change()
-        # 进行OrderedDict的组装
+        # 构建股票数组，(date, price, change)
         self.stock_dict = self._init_stock_dict()
 
     def __init_change(self):
@@ -314,11 +322,12 @@ class StockTradeDays(object):
 
     def _init_days(self, start_date, date_array):
         """
-        protect方法，
+        根据开始时间或者时间序列得出股票对应的日期序列
         :param start_date: 初始日期
         :param date_array: 给定日期序列
         :return:
         """
+        # 如果date_array为None，使用start_date和self.__price_array来确定日期序列
         if date_array is None:
             # 由start_date和self.__price_array来确定日期序列
             date_array = [str(start_date + ind) for ind, _ in
@@ -331,7 +340,7 @@ class StockTradeDays(object):
 
     def _init_stock_dict(self):
         """
-        使用namedtuple，OrderedDict将结果合并
+        将日期date、价格price、涨跌幅change组装成stock_namedtuple
         :return:
         """
         stock_namedtuple = namedtuple('stock',
@@ -347,12 +356,12 @@ class StockTradeDays(object):
 
     def filter_stock(self, want_up=True, want_calc_sum=False):
         """
-        筛选结果子集
+        过滤股票数据
         :param want_up: 是否筛选上涨
         :param want_calc_sum: 是否计算涨跌和
         :return:
         """
-        # Python中的三目表达式的写法
+        # Python中的三目表达式的写法(找出符合 want_up 的数据)
         filter_func = (lambda p_day: p_day.change > 0) if want_up else (
             lambda p_day: p_day.change < 0)
         # 使用filter_func做筛选函数
@@ -371,6 +380,8 @@ class StockTradeDays(object):
         下面的__str__，__iter__， __getitem__， __len__稍后会详细讲解作
     """
 
+    # 选中的代码定义了一个名为 __str__ 的特殊方法，这个方法在 Python 中用于返回对象的字符串表示形式。
+    # 当你打印一个对象或者将其转换为字符串时（例如，使用 str() 函数），Python 会自动调用这个方法
     def __str__(self):
         return str(self.stock_dict)
 
@@ -378,7 +389,7 @@ class StockTradeDays(object):
 
     def __iter__(self):
         """
-        通过代理stock_dict的跌倒，yield元素
+        通过代理stock_dict的迭代器, yield元素
         :return:
         """
         for key in self.stock_dict:
@@ -389,6 +400,7 @@ class StockTradeDays(object):
         return self.stock_dict[date_key]
 
     def __len__(self):
+        # 让对象支持len()函数的调用
         return len(self.stock_dict)
 
 
@@ -402,13 +414,13 @@ def sample_231():
     # 从StockTradeDays类初始化一个实例对象trade_days，内部会调用__init__
     trade_days = StockTradeDays(price_array, date_base)
     # 打印对象信息
-    print('trade_days:', trade_days)
-    print('trade_days对象长度为: {}'.format(len(trade_days)))
+    print('trade_days:', trade_days)    # 调用__str__
+    print('trade_days对象长度为: {}'.format(len(trade_days)))  # 调用__len__
 
     from collections.abc import Iterable
     # 如果是trade_days是可迭代对象，依次打印出
     if isinstance(trade_days, Iterable):
-        for day in trade_days:
+        for day in trade_days:  # 调用__iter__
             print(day)
 
     print(trade_days.filter_stock())
@@ -420,14 +432,12 @@ def sample_231():
     print('price_array[:5], date_array[:5]:', price_array[:5], date_array[:5])
     trade_days = StockTradeDays(price_array, date_base, date_array)
     print('trade_days对象长度为: {}'.format(len(trade_days)))
-    print('最后一天交易数据为：{}'.format(trade_days[-1]))
+    print('最后一天交易数据为：{}'.format(trade_days[-1]))  # 调用__getitem__
 
 
 """
     2.3.2 继承和多态
 """
-
-
 class TradeStrategyBase(six.with_metaclass(ABCMeta, object)):
     """
         交易策略抽象基类
@@ -436,6 +446,9 @@ class TradeStrategyBase(six.with_metaclass(ABCMeta, object)):
     @abstractmethod
     def buy_strategy(self, *args, **kwargs):
         # 买入策略基类
+        # @abstracemethod 没有实现类，必须在子类中被实现，否则抛出异常
+        # 这里的*args, 任意数量的参数, 数据结构 list
+        # 这里的**kwargs, 关键字参数，数据结构 dict
         pass
 
     @abstractmethod
@@ -443,7 +456,7 @@ class TradeStrategyBase(six.with_metaclass(ABCMeta, object)):
         # 卖出策略基类
         pass
 
-
+# 股票策略 1 继承自TradeStrategyBase
 class TradeStrategy1(TradeStrategyBase):
     """
         交易策略1: 追涨策略，当股价上涨一个阀值默认为7%时
@@ -474,9 +487,10 @@ class TradeStrategy1(TradeStrategyBase):
             self.keep_stock_day = 0
 
     """
-        property属性稍后会讲到
+        @property 是一个装饰器（decorator），
+        它允许你将类的方法转换为类的属性，这样你就可以像访问属性一样访问方法，而不需要使用括号来调用方法。
+        这使得代码更加简洁和易于阅读
     """
-
     @property
     def buy_change_threshold(self):
         return self.__buy_change_threshold
@@ -491,7 +505,7 @@ class TradeStrategy1(TradeStrategyBase):
         # 上涨阀值只取小数点后两位
         self.__buy_change_threshold = round(buy_change_threshold, 2)
 
-
+# 交易回测系统
 class TradeLoopBack(object):
     """
         交易回测系统
@@ -548,8 +562,12 @@ def sample_232():
     trade_loop_back = TradeLoopBack(trade_days, TradeStrategy1())
     trade_loop_back.execute_trade()
     print('回测策略1 总盈亏为：{}%'.format(reduce(lambda a, b: a + b, trade_loop_back.profit_array) * 100))
-
-    plt.plot(np.array(trade_loop_back.profit_array).cumsum())
+    
+    # np.array(trade_loop_back.profit_array 转为 Numpy 数组
+    # .cumsum() 计算数组的累积和
+    # plt.plot 绘制折线图
+    # plt.show() 显示图像
+    plt.plot(np.array(trade_loop_back.profit_array).cumsum(), color='red', linestyle='--', linewidth=2)
     plt.show()
 
 
@@ -622,7 +640,10 @@ class TradeStrategy2(TradeStrategyBase):
             self.keep_stock_day = 0
 
     """
-        稍后会详细讲解classmethod，staticmethod
+        @classmethod 它允许你将类的方法标记为类方法。类方法可以通过类名直接调用，而不需要创建类的实例。
+                    类方法的第一个参数通常是 cls，它代表类本身，而不是类的实例
+        @staticmethod 它允许你将类的方法标记为静态方法。静态方法与类方法类似，
+                    但它们不接受类实例作为第一个参数，通常用于与类相关但不依赖于实例状态的操作。
     """
 
     @classmethod
@@ -679,19 +700,19 @@ def sample_241_1():
     :return:
     """
     items = [1, 2, 3]
-    for item in itertools.permutations(items):
+    for item in itertools.permutations(items):  # 不考虑顺序，不放回 n!/(n - k)!; n = 3, k = 3
         print(item)
 
-    for item in itertools.combinations(items, 2):
+    for item in itertools.combinations(items, 2):   # 不考虑顺序，不放回 n! / (k!(n - k)!)
         print(item)
 
-    for item in itertools.combinations_with_replacement(items, 2):
+    for item in itertools.combinations_with_replacement(items, 2):  # 不考虑顺序，有放回 (n + k - 1)! / (k!(n-1)!)
         print(item)
 
     ab = ['a', 'b']
     cd = ['c', 'd']
     # 针对ab，cd两个集合进行排列组合
-    for item in itertools.product(ab, cd):
+    for item in itertools.product(ab, cd):  # 笛卡尔积
         print(item)
 
 
@@ -702,6 +723,7 @@ g_date_array = ABuSymbolPd.make_kl_df('TSLA', n_folds=2).date.tolist()
 g_trade_days = StockTradeDays(g_price_array, 0, g_date_array)
 
 
+@nb.jit(nopython=True)
 def calc(keep_stock_threshold, buy_change_threshold):
     """
     :param keep_stock_threshold: 持股天数
@@ -790,7 +812,10 @@ def sample_242():
 
     def when_done(r):
         result.append(r.result())
-
+    # with 上下文管理器：使用线程池
+    # 在多线程中，max_workers参数表示最大线程数，默认为8
+    # __enter__ 方法会在进入上下文管理器时被调用
+    # __exit__ 方法会在退出上下文管理器时被调用
     with ThreadPoolExecutor(max_workers=8) as pool:
         for keep_stock_threshold, buy_change_threshold in \
                 itertools.product(keep_stock_list, buy_change_list):
@@ -900,6 +925,7 @@ def sample_25():
 
     _ = gen_buy_change_list()
 
+    # 设置调试器
     import pdb
 
     # noinspection PyAugmentAssignment
@@ -929,12 +955,12 @@ if __name__ == "__main__":
     # sample_222()
     # sample_223()
     # sample_224()
-    sample_231()
+    # sample_231()
     # sample_232()
     # sample_233_1()
     # sample_233_2()
     # sample_241_1()
     # sample_241_2()
     # sample_242()
-    # sample_243()
+    sample_243()
     # sample_25()
