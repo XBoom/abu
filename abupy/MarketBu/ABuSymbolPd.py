@@ -31,10 +31,6 @@ from ..CoreBu.ABuParallel import delayed, Parallel
 from ..CoreBu.ABuFixes import six
 # from ..UtilBu.ABuThreadPool import AbuThreadPoolExecutor
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def _benchmark(df, benchmark, symbol):
     """
     在内部使用kline_pd获取金融时间序列pd.DataFrame后，如果参数中

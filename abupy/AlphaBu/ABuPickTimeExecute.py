@@ -22,10 +22,6 @@ from ..TradeBu import ABuTradeProxy
 from ..TradeBu.ABuKLManager import AbuKLManager
 from ..UtilBu.ABuProgress import AbuMulPidProgress
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class EFitError(Enum):
     """
         择时操作的错误码

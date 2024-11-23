@@ -13,10 +13,6 @@ from ..CoreBu.ABuEnv import EDataCacheType, EMarketDataFetchMode, EMarketSourceT
 from ..WidgetBu.ABuWGBase import WidgetBase, accordion_shut
 from ..UtilBu import ABuFileUtil
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class WidgetEnvSetMixin(object):
     """
         使用混入而不要做为上层widget拥有的模式，可为多个上层使用

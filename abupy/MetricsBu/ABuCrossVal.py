@@ -27,10 +27,6 @@ from ..MetricsBu.ABuMetricsBase import AbuMetricsBase
 from ..SimilarBu.ABuSimilar import ECoreCorrType
 from ..MarketBu import ABuMarketDrawing
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 @add_process_env_sig
 def cross_val_mul_process(vc, cv, corr_series, benchmark, buy_factors, sell_factors, cash=10000000):
     """

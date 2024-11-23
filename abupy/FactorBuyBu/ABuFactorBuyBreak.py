@@ -9,10 +9,6 @@ from __future__ import division
 
 from .ABuFactorBuyBase import AbuFactorBuyBase, AbuFactorBuyXD, BuyCallMixin, BuyPutMixin
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyAttributeOutsideInit
 class AbuFactorBuyBreak(AbuFactorBuyBase, BuyCallMixin):
     """示例正向突破买入择时类，混入BuyCallMixin，即向上突破触发买入event"""

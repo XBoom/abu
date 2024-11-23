@@ -14,10 +14,6 @@ import pandas as pd
 from ..TLineBu.ABuTLine import AbuTLine
 from ..CoreBu.ABuPdHelper import pd_rolling_std, pd_ewm_std
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def show_atr_std(kl_pd):
     """
     可视化atr移动平均std和加权移动平均std，

@@ -18,10 +18,6 @@ from ..MarketBu.ABuHkUnit import AbuHkUnit
 from ..MarketBu import ABuMarket
 from ..MarketBu.ABuMarket import MarketMixin
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class OrderMarket(MarketMixin):
     """根据AbuOrder对象，设置混入类MarketMixin中symbol_name"""
 

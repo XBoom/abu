@@ -14,10 +14,6 @@ from ..CheckBu.ABuFuncUtil import *
 from ..CheckBu.ABuChecks import *
 from ..CheckBu.ABuProcessor import arg_process, return_process
 
-__author__ = '夜猫'
-__weixin__ = 'abu_quant'
-
-
 class _NoInstances(six.with_metaclass(ABCMeta, type)):
     """阻止实例化"""
 

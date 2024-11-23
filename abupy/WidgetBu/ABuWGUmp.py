@@ -33,10 +33,6 @@ from ..UmpBu.ABuUmpEdgePrice import AbuUmpEdgePrice
 from ..UmpBu.ABuUmpEdgeMul import AbuUmpEdgeMul
 from ..UmpBu import ABuUmpManager
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyProtectedMember
 class WidgetUmp(WidgetBase):
     """回测裁判训练以及交易预测拦截ui类"""

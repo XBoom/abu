@@ -9,10 +9,6 @@ from __future__ import division
 
 from .ABuFactorSellBase import AbuFactorSellBase, ESupportDirection
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuFactorSellNDay(AbuFactorSellBase):
     """n日卖出策略，不管交易现在什么结果，买入后只持有N天"""
 

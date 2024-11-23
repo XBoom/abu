@@ -12,10 +12,6 @@ import pandas as pd
 from ..CoreBu.ABuFixes import six
 from .ABuMetricsBase import AbuMetricsBase
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyClassHasNoInit
 class AbuScoreTuple(namedtuple('AbuScoreTuple',
                                ('orders_pd',

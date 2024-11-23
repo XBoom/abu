@@ -23,9 +23,6 @@ from ..CoreBu import ABuEnv
 # noinspection PyUnresolvedReferences
 from ..CoreBu.ABuFixes import filter, six
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 """外部用户使用append_user_ump添加到外部ump list容器中"""
 _g_extend_ump_list = list()
 """是否启用外部用户使用append_user_ump添加的ump对交易进行拦截决策"""

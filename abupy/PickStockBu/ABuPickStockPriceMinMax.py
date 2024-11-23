@@ -9,10 +9,6 @@ from __future__ import division
 from .ABuPickStockBase import AbuPickStockBase, reversed_result
 import numpy as np
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuPickStockPriceMinMax(AbuPickStockBase):
     """价格选股因子示例类"""
     def _init_self(self, **kwargs):

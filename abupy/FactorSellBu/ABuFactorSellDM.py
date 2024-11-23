@@ -10,10 +10,6 @@ from __future__ import division
 from .ABuFactorSellBase import AbuFactorSellXD, ESupportDirection
 from ..IndicatorBu.ABuNDMa import calc_ma_from_prices
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuDoubleMaSell(AbuFactorSellXD):
     """示例卖出双均线择时因子"""
 

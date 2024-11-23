@@ -16,10 +16,6 @@ import numpy as np
 
 from ..CoreBu.ABuFixes import six
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuSlippageSellBase(six.with_metaclass(ABCMeta, object)):
     """非高频日内滑点卖出决策抽象基类"""
 

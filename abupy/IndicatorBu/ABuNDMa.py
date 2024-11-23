@@ -21,10 +21,6 @@ from ..CoreBu.ABuPdHelper import pd_rolling_mean, pd_ewm_mean
 from ..CoreBu.ABuFixes import six
 from ..UtilBu.ABuDTUtil import catch_error
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class EMACalcType(Enum):
     """计算移动移动平均使用的方法"""
     """简单移动平均线"""

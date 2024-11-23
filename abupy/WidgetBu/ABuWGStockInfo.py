@@ -18,10 +18,6 @@ from ..CoreBu.ABuFixes import six
 from ..UtilBu.ABuStrUtil import to_unicode
 from ..WidgetBu.ABuWGBase import WidgetBase, WidgetSearchBox
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class WidgetSearchStockInfo(WidgetBase):
     def __init__(self):
         self.stock_info = None

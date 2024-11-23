@@ -22,10 +22,6 @@ from ..UtilBu.ABuDTUtil import warnings_filter, catch_error
 from ..UtilBu import ABuFileUtil, ABuOsUtil
 from ..CoreBu.ABuParallel import run_in_subprocess, run_in_thread
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def do_clear_output(wait=False):
     """
     模块方法，clear所有的输出，内部针对notebook和命令行输出做区分

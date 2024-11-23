@@ -12,10 +12,6 @@ import ipywidgets as widgets
 from ..WidgetBu.ABuWGBase import WidgetFactorBase, WidgetFactorManagerBase, accordion_shut
 from ..WidgetBu.ABuWGBFBase import BFSubscriberMixin
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class PickStockWGManager(WidgetFactorManagerBase):
     """选股策略组织类"""
 

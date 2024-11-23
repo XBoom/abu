@@ -12,10 +12,6 @@ from ..WidgetBu.ABuWGGridSearch import WidgetGridSearch
 from ..WidgetBu.ABuWGCrossVal import WidgetCrossVal
 
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class WidgetVerifyTool(WidgetBase):
     """策略验证工具主界面类实现"""
 

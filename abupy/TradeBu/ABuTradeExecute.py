@@ -17,10 +17,6 @@ from ..TradeBu.ABuMLFeature import AbuMlFeature
 # noinspection PyUnresolvedReferences
 from ..CoreBu.ABuFixes import map
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def calc_simple_profit(orders, kl_pd):
     """
     计算交易收益，simple的意思是不考虑手续费

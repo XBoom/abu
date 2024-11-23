@@ -19,9 +19,6 @@ from ..UtilBu.ABuStrUtil import digit_str
 from ..MarketBu.ABuSymbol import Symbol, code_to_symbol
 from ..CrawlBu.ABuXqConsts import columns_map
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 _rom_dir = ABuEnv.g_project_rom_data_dir
 """a股symbol，文件定期重新爬取，更新"""
 _stock_code_cn = os.path.join(_rom_dir, 'stock_code_CN.csv')

@@ -17,10 +17,6 @@ from ..MarketBu import ABuSymbolPd
 from ..IndicatorBu import ABuNDMa
 from ..UtilBu import ABuScalerUtil
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuMLPd(six.with_metaclass(ABCMeta, object)):
     """封装AbuML的上层具体业务逻辑类"""
 

@@ -24,9 +24,6 @@ from ..MarketBu.ABuSymbol import Symbol, code_to_symbol
 from ..MarketBu.ABuSymbolFutures import AbuFuturesCn, AbuFuturesGB
 from ..MarketBu.ABuSymbolStock import AbuSymbolCN, AbuSymbolUS, AbuSymbolHK
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 # TODO 在全市场回测时设置g_use_env_market_set=True
 """默认False，如果进行全市场回测这里可以设置True, 配合LazyFunc提高效率"""
 g_use_env_market_set = False

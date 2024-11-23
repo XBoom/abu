@@ -20,9 +20,6 @@ from .ABuPickBase import AbuPickTimeWorkBase
 from ..CoreBu.ABuFixes import filter
 from ..UtilBu.ABuProgress import AbuMulPidProgress
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 """
     是否使用自然周，自然月，默认开启，如需关闭使用下面代码：
     abupy.alpha.pick_time_worker.g_natural_long_task = False

@@ -9,10 +9,6 @@ from __future__ import division
 
 from .ABuFactorSellBase import AbuFactorSellBase, AbuFactorSellXD, ESupportDirection
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuFactorSellBreak(AbuFactorSellBase):
     """示例向下突破卖出择时因子"""
 

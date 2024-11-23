@@ -14,6 +14,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import matplotlib.pyplot as plt
 import numpy as np
+from numba import jit
 import seaborn as sns
 
 # noinspection PyUnresolvedReferences
@@ -723,7 +724,7 @@ g_date_array = ABuSymbolPd.make_kl_df('TSLA', n_folds=2).date.tolist()
 g_trade_days = StockTradeDays(g_price_array, 0, g_date_array)
 
 
-@nb.jit(nopython=True)
+@jit(nopython=True)
 def calc(keep_stock_threshold, buy_change_threshold):
     """
     :param keep_stock_threshold: 持股天数
@@ -949,7 +950,7 @@ def sample_25():
         pdb.set_trace()
 
 if __name__ == "__main__":
-    # sample_211()
+    sample_211()
     # sample_212()
     # sample_221()
     # sample_222()
@@ -962,5 +963,5 @@ if __name__ == "__main__":
     # sample_241_1()
     # sample_241_2()
     # sample_242()
-    sample_243()
+    # sample_243()
     # sample_25()

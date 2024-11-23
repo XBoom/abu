@@ -15,10 +15,6 @@ from ..FactorSellBu.ABuFactorSellDM import AbuDoubleMaSell
 from ..FactorSellBu.ABuFactorSellNDay import AbuFactorSellNDay
 from ..WidgetBu.ABuWGSFBase import WidgetFactorSellBase
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class SellDMWidget(WidgetFactorSellBase):
     """对应AbuDoubleMaSell策略widget"""
 

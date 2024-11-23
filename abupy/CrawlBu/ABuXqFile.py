@@ -15,9 +15,6 @@ from .ABuXqConsts import columns_map
 
 import pandas as pd
 
-__author__ = '小青蛙'
-__weixin__ = 'abu_quant'
-
 # 保存股票信息
 STOCK_INFO_DIR = path.join(g_project_data_dir, 'stock_info')
 # 保存爬取得股票信息

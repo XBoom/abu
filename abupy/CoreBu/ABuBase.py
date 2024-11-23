@@ -15,10 +15,6 @@ import pandas as pd
 from ..CoreBu.ABuFixes import signature, Parameter, pickle
 from ..CoreBu import ABuEnv
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class FreezeAttrMixin(object):
     """冻结对外设置属性混入类，设置抛异常"""
 

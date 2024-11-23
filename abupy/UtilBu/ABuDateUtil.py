@@ -22,11 +22,6 @@ except ImportError:
     # 没有安装dateutil使用datetime.timedelta
     from datetime import timedelta
 
-
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 """默认的时间日期格式，项目中金融时间序列等时间相关默认格式"""
 K_DEFAULT_DT_FMT = "%Y-%m-%d"
 

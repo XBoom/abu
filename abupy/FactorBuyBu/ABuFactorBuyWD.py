@@ -9,10 +9,6 @@ from __future__ import division
 
 from .ABuFactorBuyBase import AbuFactorBuyTD, BuyCallMixin
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuFactorBuyWD(AbuFactorBuyTD, BuyCallMixin):
     """
         示例短线：日胜率均值回复策略

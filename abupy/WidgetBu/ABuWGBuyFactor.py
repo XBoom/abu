@@ -14,10 +14,6 @@ from ..FactorBuyBu.ABuFactorBuyWD import AbuFactorBuyWD
 from ..FactorBuyBu.ABuFactorBuyDemo import AbuSDBreak, AbuWeekMonthBuy
 from ..FactorBuyBu.ABuFactorBuyTrend import AbuDownUpTrend
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class BuyDMWidget(WidgetFactorBuyBase):
     """对应AbuDoubleMaBuy策略widget"""
 

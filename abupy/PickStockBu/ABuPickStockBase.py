@@ -14,10 +14,6 @@ from ..CoreBu.ABuFixes import six
 from ..CoreBu import ABuEnv
 from ..CoreBu.ABuBase import AbuParamBase
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def reversed_result(func):
     """对选股结果进行反转的装饰器，装饰在fit_pick上"""
     @functools.wraps(func)

@@ -11,10 +11,6 @@ from ..TLineBu.ABuTLine import AbuTLine
 from ..TLineBu.ABuTLGolden import calc_golden
 from .ABuFactorBuyBase import AbuFactorBuyXD, BuyCallMixin
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyAttributeOutsideInit
 class AbuUpDownTrend(AbuFactorBuyXD, BuyCallMixin):
     """示例长线上涨中寻找短线下跌买入择时因子，混入BuyCallMixin"""

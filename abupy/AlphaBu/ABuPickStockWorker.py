@@ -16,10 +16,6 @@ from ..MarketBu.ABuMarket import all_symbol
 from ..PickStockBu.ABuPickStockBase import AbuPickStockBase
 from ..UtilBu.ABuProgress import AbuMulPidProgress
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuPickStockWorker(AbuPickStockWorkBase):
     """选股类"""
 

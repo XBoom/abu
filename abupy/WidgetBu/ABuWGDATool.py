@@ -11,10 +11,6 @@ from IPython.display import display
 from ..UtilBu import ABuKLUtil
 from ..WidgetBu.ABuWGToolBase import WidgetToolBase, multi_fetch_symbol_analyse
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyUnusedLocal
 class WidgetDATool(WidgetToolBase):
     """振幅分析界面"""

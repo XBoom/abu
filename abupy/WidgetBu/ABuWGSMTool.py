@@ -21,10 +21,6 @@ from ..CoreBu.ABuEnv import EMarketTargetType
 from ..CoreBu import ABuEnv
 from ..UtilBu.ABuStatsUtil import cosine_distance_matrix, manhattan_distance_matrix, euclidean_distance_matrix
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyUnusedLocal,PyProtectedMember
 class WidgetSMTool(WidgetToolBase):
     """数据分析界面"""

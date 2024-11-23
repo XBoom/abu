@@ -10,9 +10,6 @@ from __future__ import division
 
 from .ABuFactorSellBase import AbuFactorSellBase, ESupportDirection
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 """外部可通过如：abupy.fs.pre.g_default_pre_atr_n = 2.5来修改默认值"""
 g_default_pre_atr_n = 1.5
 

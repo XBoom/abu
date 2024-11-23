@@ -10,10 +10,6 @@ from ..MLBu.ABuMLPd import AbuMLPd
 from .ABuUmpBase import ump_edge_make_xy, BuyUmpMixin
 from .ABuUmpEdgeBase import AbuUmpEdgeBase
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class UmpPriceFiter(AbuMLPd):
     """
         内部类，只需要实现make_xy，且使用ump_edge_make_xy装饰

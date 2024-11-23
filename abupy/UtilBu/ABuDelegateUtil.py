@@ -13,10 +13,6 @@ from operator import attrgetter
 
 from ..CoreBu.ABuFixes import signature
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def first_delegate_has_method(delegate, check_params=True):
     """
     装饰在类函数上，如果delegate有定义对应名称方法，优先使用delegate中的方法，否则使用被装饰的方法

@@ -12,10 +12,6 @@ from ..BetaBu.ABuKellyPosition import AbuKellyPosition
 from ..BetaBu.ABuPtPosition import AbuPtPosition
 from ..WidgetBu.ABuWGPosBase import WidgetPositionBase
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AtrPosWidget(WidgetPositionBase):
     """对应AbuAtrPosition策略widget"""
 

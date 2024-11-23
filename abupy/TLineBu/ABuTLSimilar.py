@@ -28,9 +28,6 @@ from ..SimilarBu.ABuSimilar import from_local
 from ..TLineBu.ABuTLine import AbuTLine
 from ..UtilBu.ABuDTUtil import plt_show
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 g_top_corr_cnt = 300
 g_coint_threshold = 0.38
 g_coint_show_max = 10

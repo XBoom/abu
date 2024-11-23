@@ -17,9 +17,6 @@ import pandas as pd
 import scipy
 import sklearn as skl
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 
 def _parse_version(version_string):
     """

@@ -31,10 +31,6 @@ from ..TradeBu.ABuCapital import AbuCapital
 from ..MetricsBu.ABuMetricsBase import AbuMetricsBase
 from ..CoreBu.ABuStore import AbuResultTuple
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyProtectedMember
 class WidgetRunLoopBack(WidgetBase):
     """基础界面可以化：初始资金，回测开始，结束周期，参考大盘等"""

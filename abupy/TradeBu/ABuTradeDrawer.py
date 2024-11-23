@@ -25,10 +25,6 @@ from ..TradeBu.ABuCapital import AbuCapital
 g_enable_his_corr = True
 g_enable_his_trade = True
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def plot_his_trade(orders, kl_pd):
     """
     可视化绘制AbuOrder对象，绘制交易买入时间，卖出时间，价格，生效因子等

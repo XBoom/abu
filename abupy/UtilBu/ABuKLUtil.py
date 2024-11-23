@@ -25,9 +25,6 @@ import pandas as pd
 from ..CoreBu import ABuEnv
 from ..CoreBu.ABuPdHelper import pd_resample
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 log_func = logging.info if ABuEnv.g_is_ipython else print
 
 

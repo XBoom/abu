@@ -51,8 +51,6 @@ import threading
 import weakref
 import sys
 
-__author__ = 'Brian Quinlan (brian@sweetapp.com)'
-
 # Workers are created as daemon threads and processes. This is done to allow the
 # interpreter to exit when there are still idle processes in a
 # ProcessPoolExecutor's process pool (i.e. shutdown() was not called). However,

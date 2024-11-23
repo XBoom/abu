@@ -23,11 +23,6 @@ from ..TradeBu.ABuKLManager import AbuKLManager
 from ..TradeBu.ABuCapital import AbuCapital
 from ..TradeBu import ABuTradeExecute
 
-
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def valid_check(func):
     """检测度量的输入是否正常，非正常显示info，正常继续执行被装饰方法"""
 

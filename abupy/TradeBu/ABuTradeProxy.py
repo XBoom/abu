@@ -17,10 +17,6 @@ import pandas as pd
 from . import ABuTradeDrawer
 from . import ABuTradeExecute
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class EOrderSameRule(Enum):
     """对order_pd中对order判断为是否相同使用的规则"""
 

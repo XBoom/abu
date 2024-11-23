@@ -12,10 +12,6 @@ from abc import ABCMeta
 
 from ..CoreBu.ABuFixes import six
 
-__author__ = '夜猫'
-__weixin__ = 'abu_quant'
-
-
 class CheckError(six.with_metaclass(ABCMeta, TypeError)):
     """Check失败的Error类型"""
     pass

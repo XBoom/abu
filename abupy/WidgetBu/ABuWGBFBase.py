@@ -11,10 +11,6 @@ import ipywidgets as widgets
 
 from ..WidgetBu.ABuWGBase import WidgetFactorBase, WidgetFactorManagerBase
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyUnresolvedReferences
 class BFSubscriberMixin(object):
     """

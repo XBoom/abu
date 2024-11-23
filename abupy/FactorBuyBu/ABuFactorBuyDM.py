@@ -16,10 +16,6 @@ from ..IndicatorBu.ABuNDMa import calc_ma_from_prices
 from ..CoreBu.ABuPdHelper import pd_resample
 from ..TLineBu.ABuTL import AbuTLine
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyAttributeOutsideInit
 class AbuDoubleMaBuy(AbuFactorBuyXD, BuyCallMixin):
     """示例买入动态自适应双均线策略"""

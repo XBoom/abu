@@ -28,10 +28,6 @@ from ..MarketBu.ABuMarket import split_k_market
 from ..MarketBu.ABuDataCheck import check_symbol_data
 from ..UtilBu import ABuProgress
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class ParameterGrid(object):
     """参数进行product辅助生成类"""
 

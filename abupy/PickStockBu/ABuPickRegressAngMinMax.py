@@ -11,10 +11,6 @@ import numpy as np
 from ..UtilBu import ABuRegUtil
 from .ABuPickStockBase import AbuPickStockBase, reversed_result
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuPickRegressAngMinMax(AbuPickStockBase):
     """拟合角度选股因子示例类"""
     def _init_self(self, **kwargs):

@@ -8,10 +8,6 @@ from __future__ import division
 from ..CoreBu.ABuFixes import six
 from ..TLineBu.ABuTL import AbuTLine
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuLeastPolyWrap(object):
     """示例做为买入因子策略装饰器封装show_least_valid_poly对大盘震荡大的情况下封锁交易"""
 

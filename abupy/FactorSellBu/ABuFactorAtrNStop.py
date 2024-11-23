@@ -9,10 +9,6 @@ from __future__ import division
 
 from .ABuFactorSellBase import AbuFactorSellBase, ESupportDirection
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuFactorAtrNStop(AbuFactorSellBase):
     """示例n倍atr(止盈止损)因子"""
 

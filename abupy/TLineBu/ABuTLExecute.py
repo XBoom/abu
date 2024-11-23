@@ -26,9 +26,6 @@ from ..UtilBu import ABuRegUtil, ABuScalerUtil
 from ..MarketBu import ABuSymbolPd
 from ..UtilBu.ABuDTUtil import plt_show
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 """模块打印根据环境选择logging.info或者print函数"""
 log_func = logging.info if ABuEnv.g_is_ipython else print
 """多项拟合函数寻找阻力，支撑位的poly倍数基数"""

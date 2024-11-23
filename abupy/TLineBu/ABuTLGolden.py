@@ -14,10 +14,6 @@ import matplotlib.pyplot as plt
 from ..TLineBu import ABuTLExecute
 from ..UtilBu.ABuDTUtil import plt_show
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def calc_golden(kl_pd, show=True):
     """
     只针对金融时间序列的收盘价格close序列，进行黄金分割及比例分割

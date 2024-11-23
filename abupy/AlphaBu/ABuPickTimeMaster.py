@@ -19,10 +19,6 @@ from ..TradeBu import ABuTradeExecute
 from ..TradeBu.ABuKLManager import AbuKLManager
 from ..CoreBu.ABuParallel import delayed, Parallel
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuPickTimeMaster(object):
     """择时并行多任务调度类"""
 

@@ -15,9 +15,6 @@ import functools
 
 from ..CoreBu import ABuEnv
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 # if ABuEnv.g_is_mac_os:
 if False:
     """

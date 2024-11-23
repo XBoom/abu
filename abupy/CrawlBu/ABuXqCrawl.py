@@ -23,9 +23,6 @@ from ..UtilBu import ABuDTUtil
 # noinspection PyUnresolvedReferences
 from ..CoreBu.ABuFixes import map, reduce, filter
 
-__author__ = '小青蛙'
-__weixin__ = 'abu_quant'
-
 _NAV_PATH = path.join(g_project_rom_data_dir, 'hq_nav.txt')
 
 

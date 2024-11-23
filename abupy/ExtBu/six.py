@@ -24,10 +24,6 @@ import operator
 import sys
 import types
 
-__author__ = "Benjamin Peterson <benjamin@python.org>"
-__version__ = "1.4.1"
-
-
 # Useful for very coarse version differentiation.
 PY2 = sys.version_info[0] == 2
 PY3 = sys.version_info[0] == 3

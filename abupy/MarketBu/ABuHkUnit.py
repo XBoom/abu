@@ -17,9 +17,6 @@ from ..CoreBu.ABuFixes import six
 from ..UtilBu.ABuDTUtil import singleton
 from ..MarketBu.ABuSymbol import Symbol
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 _rom_dir = ABuEnv.g_project_rom_data_dir
 """文件定期重新爬取，更新"""
 _hk_unit_csv = os.path.join(_rom_dir, 'hk_unit.csv')

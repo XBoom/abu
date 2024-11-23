@@ -7,8 +7,6 @@ import threading
 import itertools
 import time
 
-__author__ = 'Brian Quinlan (brian@sweetapp.com)'
-
 FIRST_COMPLETED = 'FIRST_COMPLETED'
 FIRST_EXCEPTION = 'FIRST_EXCEPTION'
 ALL_COMPLETED = 'ALL_COMPLETED'

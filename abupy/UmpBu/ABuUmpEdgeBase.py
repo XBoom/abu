@@ -22,9 +22,6 @@ from .ABuUmpBase import AbuUmpBase
 # noinspection PyUnresolvedReferences
 from ..CoreBu.ABuFixes import filter
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 """在predict中度量输入的x和矩阵中其它矢量的pairwise_distances后，通过if distances_cx.min() > K_DISTANCE_THRESHOLD过滤"""
 K_DISTANCE_THRESHOLD = 0.668
 """从第一轮pairwise_distances的结果使用argsort后取K_N_TOP_SEED个做为第二轮相似匹配的种子"""

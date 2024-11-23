@@ -20,9 +20,6 @@ from ..TradeBu.ABuKLManager import AbuKLManager
 from ..UtilBu import ABuDateUtil
 from ..UtilBu import ABuProgress
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 
 def run_loop_back(read_cash, buy_factors, sell_factors, stock_picks=None, choice_symbols=None, n_folds=2,
                   start=None,

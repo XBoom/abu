@@ -17,9 +17,6 @@ from ..UtilBu.ABuStrUtil import to_unicode
 from ..UtilBu.ABuOsUtil import show_msg
 from ..MarketBu.ABuSymbol import search_to_symbol_dict
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 show_msg_func = logging.info
 """基于不同系统的提示框使用partial包装title以及显示log"""
 show_msg_toast_func = partial(show_msg, u'提示', log=True)

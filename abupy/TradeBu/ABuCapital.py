@@ -18,10 +18,6 @@ from ..TradeBu.ABuOrder import AbuOrder
 from ..TradeBu.ABuCommission import AbuCommission
 from ..CoreBu.ABuBase import PickleStateMixin
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuCapital(PickleStateMixin):
     """资金类"""
 

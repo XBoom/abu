@@ -21,10 +21,6 @@ from ..MarketBu.ABuDataCheck import browser_down_csv_zip
 from ..UtilBu import ABuProgress
 from ..TLineBu.ABuTL import AbuTLine
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class WidgetToolSet(WidgetBase, WidgetEnvSetMixin, WidgetTimeModeMixin):
     """基础设置界面"""
 

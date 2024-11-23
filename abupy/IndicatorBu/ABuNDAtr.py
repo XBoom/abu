@@ -22,10 +22,6 @@ from ..CoreBu.ABuPdHelper import pd_ewm_mean
 from ..UtilBu import ABuScalerUtil
 from .ABuNDBase import plot_from_order, g_calc_type, ECalcType
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyUnresolvedReferences
 def _calc_atr_from_ta(high, low, close, time_period=14):
     """

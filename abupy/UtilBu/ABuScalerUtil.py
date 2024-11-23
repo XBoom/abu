@@ -10,10 +10,6 @@ from __future__ import absolute_import
 import numpy as np
 import pandas as pd
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def scaler_log10(group):
     """
     对输入的group进行np.log10

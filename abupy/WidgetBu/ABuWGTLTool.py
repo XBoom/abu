@@ -18,10 +18,6 @@ from ..TLineBu.ABuTLGolden import calc_golden
 from ..UtilBu import ABuProgress
 from ..WidgetBu.ABuWGToolBase import WidgetToolBase, single_fetch_symbol_analyse
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyUnusedLocal
 class WidgetTLTool(WidgetToolBase):
     """技术分析界面"""

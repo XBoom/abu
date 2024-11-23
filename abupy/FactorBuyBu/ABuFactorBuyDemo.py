@@ -15,10 +15,6 @@ from .ABuFactorBuyBreak import AbuFactorBuyBreak
 from ..TLineBu.ABuTL import AbuTLine
 from ..FactorBuyBu.ABuBuyFactorWrap import AbuLeastPolyWrap
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyAttributeOutsideInit
 class AbuSDBreak(AbuFactorBuyXD, BuyCallMixin):
     """示例买入因子： 在AbuFactorBuyBreak基础上进行降低交易频率，提高系统的稳定性处理"""

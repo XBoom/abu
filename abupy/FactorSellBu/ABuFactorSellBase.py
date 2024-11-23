@@ -18,10 +18,6 @@ from ..SlippageBu.ABuSlippageSellMean import AbuSlippageSellMean
 from ..TradeBu.ABuMLFeature import AbuMlFeature
 from ..UmpBu.ABuUmpManager import AbuUmpManager
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class ESupportDirection(Enum):
     """子策略在support_direction中支持的方向数值定义"""
     DIRECTION_CAll = 1.0

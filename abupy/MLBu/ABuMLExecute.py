@@ -23,9 +23,6 @@ from ..UtilBu.ABuDTUtil import warnings_filter
 from ..CoreBu.ABuFixes import range
 from ..UtilBu.ABuFileUtil import file_exist
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 __all__ = [
            'run_silhouette_cv_estimator',
            'run_prob_cv_estimator',

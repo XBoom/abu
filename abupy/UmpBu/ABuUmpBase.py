@@ -17,10 +17,6 @@ import sklearn.preprocessing as preprocessing
 from ..UtilBu import ABuFileUtil
 from ..CoreBu.ABuFixes import six
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class BuyUmpMixin(object):
     """
         买入ump混入, 与BuyFeatureMixin不同，每一个具体的ump只能属于一个ump类别

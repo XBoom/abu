@@ -17,9 +17,6 @@ from scipy import stats
 # noinspection PyUnresolvedReferences
 from ..CoreBu.ABuFixes import range, xrange
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 # TODO 使用enum代替K常量
 # 代表买因子参数组合
 K_GEN_FACTOR_PARAMS_BUY = 0

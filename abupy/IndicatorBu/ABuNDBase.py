@@ -14,10 +14,6 @@ from enum import Enum
 
 from ..UtilBu import ABuDateUtil
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class ECalcType(Enum):
     """
         技术指标技术方式类

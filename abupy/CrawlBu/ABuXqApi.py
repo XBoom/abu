@@ -7,9 +7,6 @@ import time
 
 from ..CoreBu import ABuFixes
 
-__author__ = '小青蛙'
-__weixin__ = 'abu_quant'
-
 BASE_XQ_URL = 'https://xueqiu.com'
 
 BASE_XQ_HQ_URL = BASE_XQ_URL + '/hq'

@@ -23,10 +23,6 @@ from ..UtilBu.ABuFileUtil import batch_h5s
 # noinspection PyUnresolvedReferences
 from ..CoreBu.ABuFixes import filter
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyUnusedLocal
 @add_process_env_sig
 def gen_dict_pick_time_kl_pd(target_symbols, capital, benchmark, show_progress=True):

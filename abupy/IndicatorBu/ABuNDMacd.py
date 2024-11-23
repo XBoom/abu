@@ -22,10 +22,6 @@ from ..UtilBu import ABuScalerUtil
 from ..UtilBu.ABuDTUtil import catch_error
 from ..CoreBu.ABuPdHelper import pd_ewm_mean
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyUnresolvedReferences
 def _calc_macd_from_ta(price, fast_period=12, slow_period=26, signal_period=9):
     """

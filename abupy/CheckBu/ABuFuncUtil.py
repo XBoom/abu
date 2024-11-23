@@ -18,10 +18,6 @@ except ImportError:
 
     from inspect import getargspec
 
-__author__ = '夜猫'
-__weixin__ = 'abu_quant'
-
-
 class ArgNoDefault(six.with_metaclass(ABCMeta, TypeError)):
     """没有默认值的参数对象"""
     pass

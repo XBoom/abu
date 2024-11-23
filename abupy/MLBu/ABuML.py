@@ -31,9 +31,6 @@ from ..UtilBu.ABuDTUtil import warnings_filter
 from ..UtilBu.ABuDTUtil import params_to_numpy
 from ..CoreBu.ABuFixes import signature
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 p_dir = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.path.pardir))
 ML_TEST_FILE = os.path.join(p_dir, 'RomDataBu/ml_test.csv')
 

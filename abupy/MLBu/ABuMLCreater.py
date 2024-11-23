@@ -50,10 +50,6 @@ from ..MLBu import ABuMLGrid
 # except ImportError:
 #     from ..CoreBu.ABuFixes import GMM
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuMLCreater(object):
     """封装常用有简单和无监督学习器实例化类"""
 

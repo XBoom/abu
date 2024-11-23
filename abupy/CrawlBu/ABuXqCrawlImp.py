@@ -17,10 +17,6 @@ from .ABuXqApi import BASE_XQ_HQ_URL
 from .ABuXqApi import BASE_XQ_STOCK_INFO
 from ..ExtBu import six
 
-__author__ = '小青蛙'
-__weixin__ = 'abu_quant'
-
-
 def _bs4_html(content):
     """
     使用BeautifulSoup解析html

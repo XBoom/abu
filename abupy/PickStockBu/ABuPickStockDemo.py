@@ -14,10 +14,6 @@ from ..CoreBu.ABuEnv import EMarketDataSplitMode
 from ..MarketBu import ABuSymbolPd
 from ..TradeBu import AbuBenchmark
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuPickStockShiftDistance(AbuPickStockBase):
     """位移路程比选股因子示例类"""
 

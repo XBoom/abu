@@ -13,10 +13,6 @@ from ..ExtBu.empyrical import stats
 from ..MetricsBu.ABuMetricsBase import AbuMetricsBase, valid_check
 from ..UtilBu.ABuDTUtil import warnings_filter
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuMetricsFutures(AbuMetricsBase):
     """期货度量类，主要区别在于不涉及benchmark"""
 

@@ -23,9 +23,6 @@ from ..TLineBu import ABuTLWave
 from ..UtilBu import ABuRegUtil
 from ..UtilBu import ABuStrUtil
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 # 内置特征，趋势角度
 g_deg_keys = [21, 42, 60, ABuEnv.g_market_trade_year]
 # 内置特征，价格rank

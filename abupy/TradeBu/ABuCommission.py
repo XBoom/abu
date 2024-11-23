@@ -20,10 +20,6 @@ from ..CoreBu.ABuEnv import EMarketTargetType
 from .ABuOrder import OrderMarket
 from ..MarketBu import ABuMarket
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyUnusedLocal
 def calc_commission_us(trade_cnt, price):
     """

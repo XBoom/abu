@@ -13,10 +13,6 @@ import functools
 from ..CoreBu.ABuFixes import filter
 from ..CoreBu.ABuFixes import signature, Parameter
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def add_process_env_sig(func):
     """
     初始化装饰器时给被装饰函数添加env关键字参数，在wrapper中将env对象进行子进程copy

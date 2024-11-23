@@ -21,10 +21,6 @@ from ..SlippageBu.ABuSlippageBuyMean import AbuSlippageBuyMean
 from ..UtilBu.ABuLazyUtil import LazyFunc
 from ..UmpBu.ABuUmpManager import AbuUmpManager
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class BuyCallMixin(object):
     """
         混入类，混入代表买涨，不完全是期权中buy call的概念，

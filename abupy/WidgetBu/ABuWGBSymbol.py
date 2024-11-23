@@ -15,10 +15,6 @@ from ..UtilBu.ABuStrUtil import to_unicode
 from ..MarketBu.ABuSymbolStock import AbuSymbolCN, AbuSymbolUS, AbuSymbolHK
 from ..MarketBu.ABuSymbolFutures import AbuFuturesCn, AbuFuturesGB
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class WidgetSymbolChoice(WidgetBase):
     """股票池选股ui界面"""
 

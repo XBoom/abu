@@ -29,9 +29,6 @@ from ..UtilBu.ABuDTUtil import arr_to_numpy
 from ..UtilBu.ABuLazyUtil import LazyFunc
 from ..UtilBu.ABuDTUtil import plt_show
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
 """模块打印根据环境选择logging.info或者print函数"""
 log_func = logging.info if ABuEnv.g_is_ipython else print
 

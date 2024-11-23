@@ -15,10 +15,6 @@ from ..CoreBu import ABuEnv
 from ..CoreBu.ABuBase import PickleStateMixin
 from ..CoreBu.ABuFixes import six
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class AbuBenchmark(PickleStateMixin):
     """基准类，混入PickleStateMixin，因为在abu.store_abu_result_tuple会进行对象本地序列化"""
 

@@ -10,10 +10,6 @@ from ..MLBu.ABuMLPd import AbuMLPd
 from .ABuUmpBase import ump_main_make_xy, BuyUmpMixin
 from .ABuUmpMainBase import AbuUmpMainBase
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class UmpJumpFiter(AbuMLPd):
     """
         内部类，只需要实现make_xy，且使用ump_main_make_xy装饰

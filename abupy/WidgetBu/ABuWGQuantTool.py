@@ -13,10 +13,6 @@ from ..WidgetBu.ABuWGTLTool import WidgetTLTool
 from ..WidgetBu.ABuWGDATool import WidgetDATool
 from ..WidgetBu.ABuWGSMTool import WidgetSMTool
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class WidgetQuantTool(WidgetBase):
     """量化分析工具主界面"""
 

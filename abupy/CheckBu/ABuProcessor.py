@@ -17,10 +17,6 @@ try:
 except ImportError:
     from six.moves import zip_longest
 
-__author__ = '夜猫'
-__weixin__ = 'abu_quant'
-
-
 def arg_process(*arg_funcs, **kwarg_funcs):
     """
     【装饰器】

@@ -16,10 +16,6 @@ from .ABuSymbol import EMarketTargetType
 from ..CoreBu.ABuFixes import six
 from ..UtilBu import ABuDateUtil
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 def del_columns(df, columns):
     """
     从df中删除参数columns指定的整列数据

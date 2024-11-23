@@ -16,10 +16,6 @@ from ..MetricsBu.ABuCrossVal import AbuCrossVal
 from ..CoreBu import ABuEnv
 from ..CoreBu.ABuEnv import EMarketTargetType
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 # noinspection PyProtectedMember
 class WidgetCrossVal(WidgetBase):
     """策略相关性交叉验证ui类"""

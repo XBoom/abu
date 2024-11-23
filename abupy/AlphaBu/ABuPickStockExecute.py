@@ -13,10 +13,6 @@ from ..MarketBu.ABuMarket import split_k_market
 from ..TradeBu.ABuKLManager import AbuKLManager
 from ..CoreBu.ABuFixes import ThreadPoolExecutor
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 @add_process_env_sig
 def do_pick_stock_work(choice_symbols, benchmark, capital, stock_pickers):
     """

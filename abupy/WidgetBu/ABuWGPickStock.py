@@ -13,10 +13,6 @@ from ..PickStockBu.ABuPickStockDemo import AbuPickStockShiftDistance, AbuPickSto
 from ..PickStockBu.ABuPickStockPriceMinMax import AbuPickStockPriceMinMax
 from ..WidgetBu.ABuWGPSBase import WidgetPickStockBase
 
-__author__ = '阿布'
-__weixin__ = 'abu_quant'
-
-
 class PSPriceWidget(WidgetPickStockBase):
     """对应AbuPickStockPriceMinMax策略widget"""
 
